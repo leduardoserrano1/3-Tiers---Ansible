@@ -1,0 +1,13 @@
+---
+- name: Deploy, configure, and populate Postgres 12
+  hosts: potsgres_servers
+  become: true
+  gather_facts: false
+  collections:
+    - community.postgresql
+  tags:
+    - potsgres_servers
+
+  roles:
+  
+    - postgres

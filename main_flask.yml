@@ -1,0 +1,11 @@
+---
+- name: Deploy, configure, and populate flask repo and virtualenv
+  hosts: flask_servers
+  become: true
+  gather_facts: true
+  tags:
+    - flask_servers
+
+  roles:
+
+    - flask

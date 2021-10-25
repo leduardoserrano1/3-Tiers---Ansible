@@ -1,0 +1,15 @@
+---
+   
+- name: Deploy haproxy load balancer
+  hosts: front_servers
+  gather_facts: false 
+  become: true
+
+  tags:
+    - front_servers
+
+  roles:
+
+    - haproxy
+
+...    
